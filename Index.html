@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MAX Studio - Профессиональная звукозапись</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Orbitron:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/media.css">
+    <link rel="stylesheet" href="styles/fixed-elements.css">
+</head>
+
+<body>
+    <!--Шапка-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbartop">
+        <div class="container-fluid">
+            <!-- Логотип и название -->
+            <a class="navbar-brand" href="#">
+                <img src="img/Logo.svg" alt="MAX Studio - логотип" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                MAX Studio</a>
+                <!-- Кнопка вызова меню на малых экранах -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключить навигацию">
+                ≡ Меню
+            </button>
+            <!-- Пункты меню -->
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="#"><i class="bi bi-house"></i> Главная</a>
+                    <a class="nav-link" href="#equipment"><i class="bi bi-mic"></i> Оборудование</a>
+                    <a class="nav-link" href="#services"><i class="bi bi-currency-dollar"></i> Услуги</a>
+                    <a class="nav-link" href="#contact"><i class="bi bi-calendar-check"></i> Запись</a>
+                    <a class="nav-link" href="#reviews"><i class="bi bi-chat-quote"></i> Отзывы</a>
+                    <a class="nav-link" href="#map"><i class="bi bi-geo-alt"></i> Контакты</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Hero-секция-->
+    <section class="hero-section">
+        <!-- Декоративные волны -->
+        <svg class="wave-container" viewBox="0 0 1200 200" preserveAspectRatio="none">
+            <path class="wave-path" d="M0,100 Q300,47 600,100 T1200,100"/>
+            <path class="wave-path" d="M0,120 Q300,70 600,120 T1200,120"/>
+            <path class="wave-path" d="M0,80 Q300,130 600,80 T1200,80"/>
+        </svg>
+        <!-- Название, описание и кнопки -->
+        <h1>Музыкальная студия MAX</h1>
+        <p>Профессиональная звукозапись, сведение и мастеринг для музыкантов любого уровня</p>
+        <div class="start-btn">
+            <a href="#contact">Записаться</a>
+            <a href="#services">Узнать цены</a>
+        </div>
+    </section>
+
+    <!--Главный контент страницы-->
+    <main class="tape" id="tape">
+        <!-- Примеры оборудования -->
+        <section class="bloc" id="equipment">
+            <h2 class="nameBl text-center">Примеры нашего оборудования</h2>
+            <div class="cont">
+                <div class="card">
+                    <img src="img/microfon.jpg" alt="Динамический микрофон Behringer">
+                    <div>
+                        <h3>Динамический микрофон</h3>
+                        <p>Behringer</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/naushniki.jpg" alt="Закрытые наушники SM7B">
+                    <div>
+                        <h3>Закрытые наушники</h3>
+                        <p>SM7B</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/Kolonki.jpg" alt="Студийный монитор Presonus">
+                    <div>
+                        <h3>Студийный монитор</h3>
+                        <p>presonus</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cont">
+                <div class="more">
+                    <p class="text-center">И еще более 20+ единиц профессионального оборудования</p>
+                </div>
+            </div>
+        </section>
+        <!-- Пакеты услуг -->
+        <section class="bloc" id="services">
+            <h2 class="nameBl text-center">Пакеты услуг</h2>
+            <div class="cont">
+                <div class="group-card">
+                    <div class="card">
+                        <div class="text-center package">
+                            <h3>NOOB</h3>
+                            <p>999 ₽</p>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-check-lg text-success fs-3"></i>
+                            <span>Звукозапись</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-check-lg text-success fs-3"></i>
+                            <span>Базовая обработка голоса</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-check-lg text-success fs-3"></i>
+                            <span>2 бесплатных правки</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-x text-danger fs-3"></i>
+                            <span>Мастеринг</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-x text-danger fs-3"></i>
+                            <span>Аранжировка</span>
+                        </div>
+                        <div class="line"></div>
+                        <a href="#contact" class="default-btn text-decoration-none d-block text-center"
+                            onclick="document.getElementById('service').value='noob'">Выбрать</a>
+                    </div>
+
+                    <div class="card">
+                        <div class="text-center package">
+                            <h3>PRO</h3>
+                            <p>1499 ₽</p>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-check-lg text-success fs-3"></i>
+                            <span>Звукозапись</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-check-lg text-success fs-3"></i>
+                            <span>Базовая обработка голоса</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-check-lg text-success fs-3"></i>
+                            <span>6 бесплатных правки</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-x text-danger fs-3"></i>
+                            <span>Мастеринг</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-x text-danger fs-3"></i>
+                            <span>Аранжировка</span>
+                        </div>
+                        <div class="line"></div>
+                        <a href="#contact" class="default-btn text-decoration-none d-block text-center"
+                            onclick="document.getElementById('service').value='pro'">Выбрать</a>
+                    </div>
+                </div>
+
+                <div class="group-card">
+                    <div class="card" id="rek">
+                        <h4 class="rep">Популярно</h4>
+                        <div class="text-center package">
+                            <h3>Hacker</h3>
+                            <p>1799 ₽</p>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-check-lg text-success fs-3"></i>
+                            <span>Звукозапись</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-check-lg text-success fs-3"></i>
+                            <span>Базовая обработка голоса</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-check-lg text-success fs-3"></i>
+                            <span>6 бесплатных правки</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-check-lg text-success fs-3"></i>
+                            <span>Мастеринг</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-x text-danger fs-3"></i>
+                            <span>Аранжировка</span>
+                        </div>
+                        <div class="line"></div>
+                        <a href="#contact" class="default-btn text-decoration-none d-block text-center"
+                            onclick="document.getElementById('service').value='hacker'">Выбрать</a>
+                    </div>
+                    <div class="card">
+                        <div class="text-center package">
+                            <h3>TOP</h3>
+                            <p>2499 ₽</p>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-check-lg text-success fs-3"></i>
+                            <span>Звукозапись</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-check-lg text-success fs-3"></i>
+                            <span>Базовая обработка голоса</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-check-lg text-success fs-3"></i>
+                            <span>∞ бесплатных правки</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-check-lg text-success fs-3"></i>
+                            <span>Мастеринг</span>
+                        </div>
+                        <div class="icon-item">
+                            <i class="bi bi-check-lg text-success fs-3"></i>
+                            <span>Аранжировка</span>
+                        </div>
+                        <div class="line"></div>
+                        <a href="#contact" class="default-btn text-decoration-none d-block text-center"
+                            onclick="document.getElementById('service').value='top'">Выбрать</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cont">
+                <div class="more">
+                    <p class="text-center">🎵 Второй раз — скидка 15% + 1 правка бесплатно!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Форма записи -->
+        <section class="bloc" id="contact">
+            <h2 class="nameBl text-center">Записаться на сессию</h2>
+            <div class="cont">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" required pattern="[A-Za-zА-Яа-яЁё\s\-]+"
+                            placeholder="Иванов Иван Иванович"
+                            title="Можно использовать только буквы русского и английского алфавита, пробелы и дефисы">
+                        <i class="bi bi-person icon-input"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]+" required placeholder="79991234567"
+                            title="Можно использовать только цифры">
+                        <i class="bi bi-phone icon-input"></i>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="ivanov777@mail.ru">
+                        <i class="bi bi-envelope icon-input"></i>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Дата и время удобное вам</label>
+                        <input type="datetime-local" id="time" name="time" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Выберите пакет</label>
+                        <select id="service" name="service">
+                            <option value="mine">Свой вариант</option>
+                            <option value="noob">NOOB - 999 ₽</option>
+                            <option value="pro">PRO - 1499 ₽</option>
+                            <option value="hacker" style="font-weight: 700;">
+                                Hacker - 1799 ₽
+                            </option>
+                            <option value="top">TOP - 2499 ₽</option>
+                        </select>
+                        <i class="bi bi-mic icon-input"></i>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Дополнительная информация</label>
+                        <textarea id="message" name="message" rows="6"
+                            placeholder="Расскажите о вашем проекте, пожеланиях по звуку..."></textarea>
+                        <i class="bi bi-chat-text icon-input textarea-icon"></i>
+                    </div>
+
+                        <div style="display: flex; gap: 5px; margin-bottom: 10px;">
+                       <input type="checkbox" id="consent" name="consent" required>
+    <label for="consent">Я согласен на обработку персональных данных</label>
+                        </div>
+
+                    
+
+                    <button type="submit" class="default-btn form-submit">
+                        <i class="bi bi-send"></i>
+                        Отправить заявку
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Слайдер с отзывами -->
+        <section class="bloc" id="reviews">
+            <h2 class="nameBl text-center">Отзывы наших клиентов</h2>
+            <div class="cont">
+                <!-- Слайдер -->
+                <div id="reviewsCarousel" class="carousel slide">
+                    <!-- Слайды -->
+                    <div class="carousel-inner">
+                        <!-- Отзыв 1 -->
+                        <div class="carousel-item active">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="img/ava3.jpg" alt="Анна К. - Вокалистка" class="review-avatar">
+                                    <div class="review-client">
+                                        <h3>Анна К.</h3>
+                                        <span>Вокалистка</span>
+                                    </div>
+                                </div>
+                                <div class="review-text">
+                                    <p>
+                                        "Записывала вокал для своего сингла. Очень понравилось качество записи и
+                                        профессиональный подход. Звукорежиссер помог раскрыть потенциал моего
+                                        голоса. Результат превзошел все ожидания!"
+                                    </p>
+                                </div>
+                                <div class="review-date">
+                                    <i class="bi bi-calendar"></i>
+                                    15 декабря 2024
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Остальные отзывы -->
+                        <div class="carousel-item">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="img/ava2.jpg" alt="Максим П. - Рэп-исполнитель" class="review-avatar">
+                                    <div class="review-client">
+                                        <h3>Максим П.</h3>
+                                        <span>Рэп-исполнитель</span>
+                                    </div>
+                                </div>
+                                <div class="review-text">
+                                    <p>
+                                        "Работал над микстейпом. Студия оснащена топовым оборудованием, особенно
+                                        впечатлил микрофон Neumann U87. Сведение сделали быстро и качественно. Буду
+                                        рекомендовать всем!"
+                                    </p>
+                                </div>
+                                <div class="review-date">
+                                    <i class="bi bi-calendar"></i>
+                                    8 декабря 2024
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="img/ava4.jpg" alt="Дарья С. - Автор-исполнитель"
+                                        class="review-avatar">
+                                    <div class="review-client">
+                                        <h3>Дарья С.</h3>
+                                        <span>Автор-исполнитель</span>
+                                    </div>
+                                </div>
+                                <div class="review-text">
+                                    <p>
+                                        "Приходила с демо-записями для мастеринга. Ребята сделали просто волшебство
+                                        - звук стал объемным, четким и профессиональным. Отдельное спасибо за
+                                        терпение и множество правок!"
+                                    </p>
+                                </div>
+                                <div class="review-date">
+                                    <i class="bi bi-calendar"></i>
+                                    2 декабря 2024
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <img src="img/ava1.jpg" alt="Иван Л. - Гитарист группы" class="review-avatar">
+                                    <div class="review-client">
+                                        <h3>Иван Л.</h3>
+                                        <span>Гитарист группы</span>
+                                    </div>
+                                </div>
+                                <div class="review-text">
+                                    <p>
+                                        "Записывали гитарные партии для нашего альбома. Атмосфера в студии
+                                        творческая, оборудование на уровне. Звукорежиссеры настоящие профессионалы
+                                        своего дела. Обязательно вернемся!"
+                                    </p>
+                                </div>
+                                <div class="review-date">
+                                    <i class="bi bi-calendar"></i>
+                                    25 ноября 2024
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Кнопки навигации -->
+                    <div class="prev-next">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Предыдущий</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Следующий</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Карта и информация -->
+        <section class="bloc" id="map">
+            <h2 class="nameBl text-center">Как нас найти</h2>
+            <div class="cont">
+                <div class="map-container">
+                    <!-- Карта -->
+                    <iframe class="map-wrapper" title="Наше расположение - г. Омск, ул. Ленина, 52"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2290.1401531937404!2d73.37392929037335!3d54.97064130268383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43aafdfe7fe12741%3A0xe957bc32773e66d8!2z0YPQuy4g0JvQtdC90LjQvdCwLCA1Miwg0J7QvNGB0LosINCe0LzRgdC60LDRjyDQvtCx0LsuLCA2NDQwNDI!5e0!3m2!1sru!2sru!4v1762958583689!5m2!1sru!2sru">
+                    </iframe>
+                    <!-- Контактная информация рядом с картой -->
+                    <div class="map-contacts">
+                        <div class="contact-item">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <div>
+                                <h3>Адрес студии</h3>
+                                <p>г. Омск, ул. Ленина, 52</p>
+                                <span>3 этаж</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="bi bi-clock-fill"></i>
+                            <div>
+                                <h3>Время работы</h3>
+                                <p>
+                                    Пн-Пт: 10:00 - 22:00 <br>
+                                    Сб-Вс: 12:00 - 20:00
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="bi bi-telephone-fill"></i>
+                            <div>
+                                <h3>Телефон</h3>
+                                <p>+7 (999) 123-45-67</p>
+                                <span>Звоните для записи<br>или
+                                    <button class="default-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        Закажите звонок
+                                    </button></span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="bi bi-info-circle-fill"></i>
+                            <div>
+                                <h3>Как добраться</h3>
+                                <p>Центр города</p>
+                                <span>Рядом с клиникой</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Футер -->
+    <footer class="footer">
+        <!-- Логотип и название студии -->
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="img/Logo.svg" alt="MAX Studio - логотип" width="40" height="34">
+                <span>MAX Studio</span>
+            </div>
+            <!-- Контактная информация -->
+            <div class="footer-info">
+                <p><i class="bi bi-geo-alt"></i> г. Омск, ул. ленина, 52</p>
+                <p><i class="bi bi-telephone"></i> +7 (999) 123-45-67</p>
+                <p><i class="bi bi-envelope"></i> maxstudio@mail.ru</p>
+            </div>
+            <!-- Социальные сети -->
+            <div class="footer-social">
+                <a href="https://m.vk.com/"><img src="img/vkLogo.svg" alt="ВКонтакте"></a>
+                <a href="https://ok.ru/"><img src="img/Odnoklassniki.svg" alt="ОК"></a>
+                <a href="https://rutube.ru/"><img src="img/Rutube.svg" alt="РУтуб"></a>
+                <a href="https://max.ru/"><img src="img/Max_logo.svg" alt="MAX"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MAX Studio.</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal fade bell-m" id="exampleModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content bell">
+                <!-- Шапка модального окна -->
+                <div class="modal-header">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/Logo.svg" alt="MAX Studio - логотип" width="30" height="24"
+                            class="d-inline-block align-text-top">
+                        Закажите звонок в MAX
+                    </a>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Закрыть"></button>
+                </div>
+                <!-- Форма модального окна -->
+                <div class="modal-body">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name-bell">Ваше имя</label>
+                            <input type="text" id="name-bell" name="name-bell" required pattern="[A-Za-zА-Яа-яЁё\s\-]+"
+                                title="Можно использовать только буквы русского и английского алфавита, пробелы и дефисы"
+                                placeholder="Иванов Иван Иванович">
+                            <i class="bi bi-person icon-input"></i>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone-bell">Телефон</label>
+                            <input type="tel" id="phone-bell" name="phone-bell" required pattern="[0-9]+"
+                                title="Можно использовать только цифры" placeholder="79991234567">
+                            <i class="bi bi-phone icon-input"></i>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="time-bell">Дата и время удобное вам</label>
+                            <input type="datetime-local" id="time-bell" name="time-bell" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message-bell">Дополнительная информация</label>
+                            <textarea id="message-bell" name="message-bell" rows="6"
+                                placeholder="Расскажите о вашем проекте, пожеланиях по звуку..."></textarea>
+                            <i class="bi bi-chat-text icon-input textarea-icon"></i>
+                        </div>
+                        <div style="display: flex; gap: 5px; margin-bottom: 10px;">
+                       <input type="checkbox" id="consent-bell" name="consent-bell" required>
+    <label for="consent-bell">Я согласен на обработку персональных данных</label>
+                        </div>
+                        <button type="submit" class="default-btn form-submit">
+                            <i class="bi bi-send"></i>
+                            Заказать звонок
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Декоративные круги -->
+    <div class="background-circles">
+        <div class="circle large"></div>
+        <div class="circle medium"></div>
+        <div class="circle small"></div>
+    </div>
+    <div class="background-circles circles-two">
+        <div class="circle large"></div>
+        <div class="circle medium"></div>
+        <div class="circle small"></div>
+    </div>
+
+    <!-- Фиксированная нижняя панель -->
+    <nav class="navbarbottom fixed-bottom">
+        <!-- Кнопка заказа звонка -->
+        <a class="floating-btn text-white bi-telephone" data-bs-toggle="modal" data-bs-target="#exampleModal"></a>
+        <!-- Аудиоплеер -->
+        <nav class="audio-player-container">
+            <!-- Основной плеер -->
+            <div class="audio-player-main">
+                <div class="audio-header" data-bs-toggle="collapse" data-bs-target="#audioPlaylist">
+                    <p class="audio-title"> Stardust - JSH</p>
+                    <button class="audio-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#audioPlaylist"
+                        aria-expanded="false" aria-label="Показать плейлист">
+                        <i class="bi bi-chevron-compact-up"></i>
+                    </button>
+                    <p class="audio-subtitle">Наши работы</p>
+                </div>
+                <audio controls class="w-100">
+                    <source src="audio/stardust-__-FREE-DOWNLOAD-CC0(chosic.com).mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
+            <!-- Плейлист (скрытый по умолчанию) -->
+            <div class="collapse" id="audioPlaylist">
+                <div class="audio-playlist">
+                    <div class="audio-item">
+                        <p>Love They - Loyalty Freak Music</p>
+                        <audio controls class="w-100">
+                            <source src="audio/Loyalty_Freak_Music_-_05_-_Love_They(chosic.com).mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="audio-item">
+                        <p>You Know Why - Loyalty Freak Music</p>
+                        <audio controls class="w-100">
+                            <source src="audio/Loyalty_Freak_Music_-_04_-_You_know_why(chosic.com).mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="audio-item">
+                        <p>Joy To The World Master - John Bartmann</p>
+                        <audio controls class="w-100">
+                            <source src="audio/John-Bartmann-joy-to-the-world-master(chosic.com).mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Кнопка вверх -->
+        <a class="floating-btn text-white bi-chevron-up" href="#"></a>
+    </nav>
+    <!-- Кнопка перехода из HERO-секции -->
+    <div class="down">
+        <a class="down-btn text-white bi-chevron-down fs-3" href="#tape"></a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

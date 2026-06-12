@@ -1,0 +1,312 @@
+/* Hero-секция */
+.hero-section {
+    position: relative;
+    width: 100%;
+    padding: 0 5vw;
+    background-color: rgba(0, 0, 0, 1);
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    z-index: 2;
+}
+.hero-section h1, .hero-section p, .hero-section .start-btn {
+    position: relative;
+    z-index: 1;
+}
+/* Навигация к ключевым разделам */
+.start-btn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+}
+.start-btn * {
+    border: solid 3px rgba(255, 255, 255, 0.6);
+    border-radius: 50px;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease;
+    flex: 1;
+}
+/* Анимация кривых */
+.wave-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.wave-path {
+    fill: none;
+    stroke: rgba(243, 0, 255, 0.1);
+    stroke-width: 90;
+    animation: waveMove 3s ease-in-out infinite;
+}
+.wave-path:nth-child(2) {
+    stroke: rgba(3, 0, 255, 0.08);
+    animation-delay: 1s;
+}
+.wave-path:nth-child(3) {
+    stroke: rgba(0, 210, 255, 0.06);
+    animation-delay: 2s;
+}
+@keyframes waveMove {
+    0%, 100% {
+        transform: translateY(0);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+
+/* Кнопка вниз из hero-секции */
+.down {
+    position: fixed;
+    bottom: 1vh;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+     opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.down-btn {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: all 0.2s ease;
+    border: solid 3px rgba(255, 255, 255, 0.6);
+    border-radius: 50px;
+}
+@keyframes hideOnScroll {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+  .down {
+    animation: hideOnScroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0 5vh;
+  }
+/*нижняя панель*/
+.navbarbottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 6px;
+    padding: 0 1vw 1vh;
+    margin: auto;
+    max-width: 950px;
+    z-index: 1;
+}
+/*Дополнительные кнопки*/
+.floating-btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 60px;
+    aspect-ratio: 1/1;
+    background: rgba(102, 126, 234, 0.9);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 100;
+    box-shadow: 0 5px 15px 9px rgba(0, 0, 0, 0.6);
+}
+@media (hover: hover) and (pointer: fine) {
+    .floating-btn:hover,
+    .start-btn *:hover,
+    .down-btn:hover {
+        background: #667eea;
+        transform: scale(1.05);
+    }
+}
+.floating-btn:active,
+.start-btn *:active{
+    transition: none;
+    background: rgba(102, 126, 234, 0.1);
+    transform: scale(0.99);
+}
+/* Аудиоплеер */
+.audio-player-container {
+    height: 100%;
+    width: 100%;
+    max-width: 800px;
+    padding: 5px 15px;
+    border: 1px solid gray;
+    border-radius: 30px;
+    min-height: 20px;
+    box-shadow: 0 5px 15px 9px rgba(0, 0, 0, 0.6);
+}
+audio {
+    height: 22px;
+}
+.audio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.audio-title,
+.audio-subtitle,
+.audio-item p {
+    font-size: 14px;
+    margin: 0;
+    font-weight: 700;
+    flex: 1;
+}
+.audio-subtitle {
+    text-align: right;
+}
+.audio-toggle {
+    background: none;
+    border: none;
+    color: white;
+    transition: transform 0.3s ease;
+    padding: 0;
+    transform: scale(1.5);
+}
+.audio-toggle[aria-expanded="true"] {
+    transform: rotate(180deg) scale(2);
+}
+
+/* Стили для шапки и меню */
+.navbartop,
+.audio-player-container {
+    background: linear-gradient(90deg, rgb(24, 0, 45), rgba(65, 0, 119, 0.6));
+    backdrop-filter: blur(10px);
+}
+.navbar-nav {
+    gap: 10px;
+}
+.nav-link {
+    color: rgba(255, 255, 255, 0.6);
+    border-radius: 100%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-right: auto;
+    padding: 5px 10px;
+}
+@media (hover: hover) and (pointer: fine) {
+    .nav-link:hover {
+        border-radius: 20px;
+        color: white;
+        background: rgba(102, 126, 234, 0.3);
+        transform: translateY(-2px);
+    }
+}
+/* Футер */
+.footer {
+    background: linear-gradient(90deg, rgba(18, 18, 18, 1) 0%, rgba(46, 46, 38, 0.83) 50%, rgba(18, 18, 18, 1) 100%);
+    padding: calc(2vh + 50px) 0;
+}
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.footer-brand {
+    display: flex;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.footer-info p {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+}
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+    .footer-social a:hover {
+        background: #667eea;
+        transform: translateY(-2px) scale(1.1);
+    }
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer-social img {
+    filter: brightness(0) invert(1);
+}
+
+/* Анимированные круги */
+.background-circles {
+    margin: 80px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    aspect-ratio: 1/1;
+    z-index: -1;
+    pointer-events: none;
+}
+.circle {
+    transform: scale(0);
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(102, 126, 234, 0.2);
+    animation: float 12s ease-in-out infinite;
+}
+.large {
+    width: 100%;
+    height: 100%;
+    animation-delay: 0s;
+}
+.medium {
+    width: 90%;
+    height: 90%;
+    animation-delay: 3s;
+}
+.small {
+    width: 60%;
+    height: 60%;
+    animation-delay: 6s;
+}
+@keyframes float {
+    100% {
+        transform: scale(1);
+        background-color: rgba(102, 126, 234, 0);
+    }
+}
+/* Второй круг */
+.circles-two {
+    bottom: 4vh;
+    right: 1vw;
+}

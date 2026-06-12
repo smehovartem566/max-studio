@@ -1,0 +1,197 @@
+/* Настройка перехода */
+[id] {
+    scroll-margin-top: 40px;
+}
+/* Медиа-запрос на ширину экрана до 992px*/
+@media (max-width: 992px) {
+    .card span {
+        font-size: 0.9rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    .review-card {
+        min-height: 320px;
+    }
+    .review-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .review-text p {
+        font-size: 0.9rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0 !important;
+    }
+    .footer-info p{
+        margin: 10px;
+    }
+
+    #services .cont {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .nameBl {
+        font-size: 2rem;
+    }
+
+    #services .more {
+        max-width: 550px;
+    }
+}
+
+/* Медиа-запрос на ширину экрана до 768px*/
+@media (max-width: 768px) {
+    .review-card {
+        min-height: 330px;
+    }
+
+    .map-container {
+        flex-direction: column;
+    }
+
+    .map-wrapper {
+        aspect-ratio: 1/1;
+    }
+
+    .map-contacts {
+        min-width: 0;
+    }
+}
+
+/* Медиа-запрос на ширину экрана до 576px*/
+@media (max-width: 576px) {
+    .card span {
+        font-size: 0.8rem;
+    }
+    .bell {
+        transform: scale(0.8);
+    }
+
+    .start-btn {
+        flex-direction: column;
+        max-width: 200px !important;
+    }
+
+    .audio-subtitle {
+        display: none;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .hero-section {
+        min-height: 400px !important;
+        height: min-content !important;
+        padding-top: 60px !important;
+    }
+    .down {
+        display: none !important;
+    }
+    .audio-item p, .audio-title {
+        font-size: 10px !important;
+    }
+    
+
+    .navbarbottom {
+        z-index: 10 !important;
+    }
+
+    .review-card {
+        min-height: 370px;
+    }
+
+    #equipment img {
+        max-width: 100px;
+    }
+
+    #equipment .card {
+        flex-direction: row;
+        padding: 0;
+    }
+
+    .more {
+        max-width: 300px !important;
+    }
+
+    .cont {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .group-card {
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .nameBl {
+        font-size: 1.5rem;
+    }
+}
+
+/* Медиа-запрос на высоту экрана до 576px*/
+@media (max-height: 576px) {
+    .navbar-nav {
+        gap: 0 !important;
+    }
+    .down {
+        display: none !important;
+    }
+    .audio-toggle {
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    .audio-player-main audio,
+    .audio-header .audio-title {
+        display: none !important;
+    }
+    .audio-player-container:has(#audioPlaylist.show) .audio-player-main audio,
+    .audio-player-container:has(#audioPlaylist.show) .audio-header .audio-title {
+        display: block !important;
+    }
+}
+
+
+/* Плавное появление */
+@keyframes scal {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+section,
+.card,
+.cont form > *,
+.more,
+.slide,
+.map-wrapper,
+.contact-item {
+    animation: scal linear both;
+    animation-timeline: view();
+    animation-range: 0 20%;
+}

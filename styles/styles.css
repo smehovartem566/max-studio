@@ -1,0 +1,353 @@
+/* Типографика */
+h1, h2, h3 {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 600;
+}
+h1 {
+    font-size: 3.5rem;
+}
+p {
+    font-size: 1rem;
+}
+/* Фон сайта */
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, rgba(14, 0, 79, 1) 0%, rgba(65, 0, 119, 0.8) 50%, rgba(14, 0, 79, 1) 100%);
+    color: white;
+    color-scheme: dark;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: "Montserrat", sans-serif;
+}
+/* Лента */
+.tape {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+}
+/* Блок */
+.bloc {
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.1);
+    border: solid rgba(128, 128, 128, 0.5);
+    border-width: 10px 3px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    max-width: 1000px;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 5px 5px 15px 9px rgba(0, 0, 0, 0.3);
+}
+/* Название блока */
+.nameBl {
+    margin: 20px auto;
+    font-size: 3rem;
+}
+/* Контейнеры */
+.cont {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+/* Карточки */
+.card {
+    background: linear-gradient(135deg, rgba(14, 0, 79, 0.9) 0%, rgba(65, 0, 119, 0.7) 50%, rgba(14, 0, 79, 0.9) 100%);
+    backdrop-filter: blur(10px);
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    color: white;
+    border-radius: 30px;
+    border: 5px solid rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    box-shadow: 5px 5px 15px 9px rgba(0, 0, 0, 0.3);
+}
+.card img {
+    border-radius: 23px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+.card img, .card p, .card h3, .more p {
+    margin: 5px;
+}
+/* Группировка карточек для адаптации */
+.group-card {
+    display: flex;
+    gap: 10px;
+}
+/* Дополнительно к блоку */
+.more {
+    width: 100%;
+    background: linear-gradient(135deg, rgba(14, 0, 79, 0.9) 0%, rgba(65, 0, 119, 0.7) 50%, rgba(14, 0, 79, 0.9) 100%);
+    backdrop-filter: blur(10px);
+    color: white;
+    border-radius: 30px;
+    margin-top: 10px;
+    transition: all 0.4s ease;
+    border: 5px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 5px 5px 15px 9px rgba(0, 0, 0, 0.3);
+}
+/* Пакеты услуг */
+.icon-item {
+    display: flex;
+    align-items: center;
+}
+.package {
+    border-radius: 100%;
+    border-bottom: 5px solid rgba(255, 255, 255, 0.4);
+}
+.line {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.4);
+}
+/* Кнопка */
+.default-btn {
+    background: none;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border: solid 1px white;
+    border-radius: 25px;
+    transition: all 0.5s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+    .default-btn:hover {
+        border: solid 1px rgba(255, 255, 255, 0);
+        background: #764ba2;
+        box-shadow: 0 5px 15px rgb(82, 109, 228);
+        transform: scale(1.03);
+    }
+}
+.default-btn:active {
+    transition: none;
+    transform: scale(0.99);
+    background: none;
+}
+/*Стили для популярного пакета*/
+.rep {
+    height: 30px;
+    padding: 0 10px;
+    position: absolute;
+    top: -17px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 47%;
+    background: #667eea;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+#rek {
+    border-color:#667eea;
+    background-color: #667eea;
+}
+/* Форма */
+.contact-form {
+    max-width: 600px;
+    width: 100%;
+}
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+.form-group label {
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 14px;
+    background: rgba(0, 0, 0, 0.3);
+    border: solid 1px rgba(255, 255, 255, 0.7);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+    box-shadow: 5px 5px 15px 9px rgba(0, 0, 0, 0.3);
+}
+@media (hover: hover) and (pointer: fine) {
+    .form-group input:hover, .form-group select:hover, .form-group textarea:hover {
+        outline: none;
+        border-color: #667eea4d;
+        transform: scale(1.01);
+        letter-spacing: 1.5px;
+        box-shadow: 0 3px 15px rgba(82, 109, 228, 0.5);
+    }
+}
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    transform: scale(1.03) translateY(-2px);
+    box-shadow: 0 5px 15px rgb(82, 109, 228);
+}
+.form-group textarea {
+    min-height: 100px;
+}
+.icon-input {
+    position: absolute;
+    right: 15px;
+    top: calc(100% - 40px);
+    color: rgba(255, 255, 255, 0.6);
+}
+/* Комбо бокс */
+.form-group select {
+    appearance: none;
+    cursor: pointer;
+}
+.form-group select option {
+    background: rgb(44, 44, 44);
+}
+/* Кнопка отправки */
+.form-submit {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    box-shadow: 5px 5px 15px 9px rgba(0, 0, 0, 0.3);
+}
+form *::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+/* Карусель с отзывами */
+.review-card {
+    background: linear-gradient(135deg, rgba(14, 0, 79, 0.8), rgba(255, 255, 255, 0.1));
+    border-radius: 30px;
+    padding: 20px;
+    margin: 20px;
+    border: solid 4px rgba(255, 255, 255, 0.7);
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 5px 5px 7px 5px rgba(0, 0, 0, 0.3);
+}
+/* Шапка карусели */
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+.review-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #667eea;
+}
+.review-client h3 {
+    font-size: 1.2rem;
+}
+.review-client span {
+    font-size: 0.9rem;
+}
+.review-text p {
+    font-style: italic;
+}
+/* Подвал карусели */
+.review-date {
+    font-size: 0.9rem;
+    border-top: 4px solid rgba(255, 255, 255, 0.3);
+    padding: 10px;
+    gap: 8px;
+}
+/* Навигация в слайдере */
+.carousel-control-prev, .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: rgba(102, 126, 234);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    position: relative;
+}
+.prev-next {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+@media (hover: hover) and (pointer: fine) {
+    .carousel-control-prev:hover, .carousel-control-next:hover {
+        background: #667eea;
+        transform: scale(1.15);
+    }
+}
+.carousel-control-prev:active, .carousel-control-next:active {
+    transition: none;
+    background: rgba(102, 126, 234, 0.3);
+    transform: scale(0.99);
+}
+/* Модальное окно с формой */
+.bell {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    border: solid 4px #667eea;
+    box-shadow: 0 5px 15px rgb(82, 109, 228);
+}
+.modal-header {
+    border: solid #667eea;
+    border-width: 0 3px 6px;
+    transform: scale(1.01);
+    border-radius: 30px;
+}
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.3);
+}
+.bell-m {
+    backdrop-filter: blur(20px);
+    background: linear-gradient(90deg, rgba(8, 0, 124, 0.1) 0%, rgba(9, 9, 121, 0.1) 35%, rgba(0, 159, 190, 0.1) 100%);
+}
+.btn-close {
+    transition: all 0.3s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+    .btn-close:hover {
+        transform: scale(1.4);
+    }
+}
+/* Информация и карта */
+.map-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+.map-wrapper {
+    width: 100%;
+    border-radius: 30px;
+    border: 3px solid #667eea;
+    box-shadow: 5px 5px 15px 9px rgba(102, 126, 234, 0.3);
+}
+.map-contacts {
+    min-width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact-item {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(14, 0, 79, 0.8), rgba(255, 255, 255, 0.1));
+    border-radius: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 5px 5px 15px 9px rgba(0, 0, 0, 0.3);
+}
+.contact-item i {
+    font-size: 24px;
+    color: #667eea;
+}
+.contact-item p {
+    font-size: 0.9rem;
+}
+.contact-item span {
+    color: rgba(255, 255, 255, 0.8);
+}
+.contact-item .default-btn {
+    margin: 2px;
+    padding: 3px 5px;
+}
